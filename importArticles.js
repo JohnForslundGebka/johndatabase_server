@@ -31,7 +31,7 @@ fs.readFile(filePath, 'utf8', (err, data) => {
   articles.forEach((article) => {
     const { name, articleNumber, price, description } = article;
     
-    const query = 'INSERT INTO articles (name, articleNumber, price, description) VALUES (?, ?, ?, ?)';
+    const query = 'INSERT INTO products (name, articleNumber, price, description) VALUES (?, ?, ?, ?)';
     
     db.query(query, [name, articleNumber, price, description], (err, results) => {
       if (err) {
