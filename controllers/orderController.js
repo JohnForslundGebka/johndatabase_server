@@ -8,7 +8,6 @@ exports.getOrderById = (req, res) => {
 
 }
 
-
 exports.getAllOrders = (req, res) => {
-    
+
 }
