@@ -173,3 +173,5 @@ package-lock.json
 *.bak
 *.swp
 *.swo
+
+.env
