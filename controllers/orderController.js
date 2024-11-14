@@ -113,6 +113,6 @@ exports.getAllOrders = (req, res) => {
 
 };
 
-function createUUID (){
-    return crypto.randomUUID();
+function createUUID() {
+  return crypto.randomUUID();
 }
