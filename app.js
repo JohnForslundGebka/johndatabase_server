@@ -5,7 +5,7 @@ const app = express();
 app.use(bodyParser.json()); // Parses incoming JSON requests
 
 // Routes
-const orderRoutes = require('./route')
+const orderRoutes = require('./routes/orders')
 app.use('/api/orders', orderRoutes); // Sets order-related routes at /api/orders
 
 const productsRoutes = require('./routes/products')
