@@ -1,8 +1,14 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors'); 
 const app = express();
 
 app.use(bodyParser.json()); // Parses incoming JSON requests
+
+app.use(cors({
+  origin: 'http://127.0.0.1:5500' // Allow only this specific origin
+}));
+
 
 // Routes
 const orderRoutes = require('./routes/orders')
