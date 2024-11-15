@@ -1,7 +1,8 @@
-CREATE TABLE orders (
-    order_id INT NOT NULL,
-    product_id INT NOT NULL,
-    quantity INT NOT NULL,
-    PRIMARY KEY (order_id, product_id),
-    FOREIGN KEY (product_id) REFERENCES products(id) ON DELETE CASCADE
+CREATE TABLE products (
+    id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(255) NOT NULL,
+    articleNumber VARCHAR(50) NOT NULL UNIQUE,
+    price DECIMAL(10,2) NOT NULL,
+    description TEXT,
+    PRIMARY KEY (id)
 );
