@@ -6,7 +6,7 @@ const app = express();
 app.use(bodyParser.json()); // Parses incoming JSON requests
 
 app.use(cors({
-  origin: 'http://127.0.0.1:5500' // Allow only this specific origin
+  origin: 'http://127.0.0.1:5501' // Allow only this specific origin
 }));
 
 app.use(express.static('public'));

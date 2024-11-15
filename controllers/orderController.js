@@ -1,5 +1,7 @@
 const db = require('../config/db');
 
+const { validate: uuidValidate } = require('uuid'); 
+
 exports.createOrder = (req, res) => {
   const { products } = req.body;
 
@@ -60,6 +62,11 @@ exports.getOrderById = (req, res) => {
   if (!orderID) {
     // If no order ID is provided, respond immediately
     return res.status(400).json({ error: 'No order ID detected' });
+  }
+
+  //doing this to check for SQL injections
+  if (!uuidValidate(orderID)) {
+    return res.status(400).json({ error: 'Invalid Order ID format' });
   }
 
   const query = `
